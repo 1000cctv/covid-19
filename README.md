@@ -2,7 +2,7 @@
 
 [파이썬 정보수집]
  - total_db.py / global_db.py
-   국가별 확진자 사이트 (https://gisanddata.maps.arcgis.com/apps/Embed/index.html?webmap=14aa9e5660cf42b5b4b546dec6ceec7c&extent=77.3846,11.535,163.5174,52.8632)에서 확진자 정보, 모든 국가별 정보 파싱
+   국가별 확진자 사이트 (https://gisanddata.maps.arcgis.com/apps/Embed/index.html?webmap=14aa9e5660cf42b5b4b546dec6ceec7c&extent=77.3846,11.535,163.5174,52.8632) 확진자 정보, 모든 국가별 정보 파싱
  - korea_db_area.py / seoul.py
    국내 서울 확진자 및 동선 정보 파싱
  - naver_news.py
