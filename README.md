@@ -1,6 +1,6 @@
 # covid-19_WebSite
 
-[파이썬 정보수집 봇]
+[파이썬 정보수집]
  - total_db.py / global_db.py
    국가별 확진자 사이트 (https://gisanddata.maps.arcgis.com/apps/Embed/index.html?webmap=14aa9e5660cf42b5b4b546dec6ceec7c&extent=77.3846,11.535,163.5174,52.8632)에서 확진자 정보, 모든 국가별 정보 파싱
  - korea_db_area.py / seoul.py
