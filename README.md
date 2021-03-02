@@ -1,12 +1,13 @@
 # covid-19_WebSite
 
 [파이썬 정보수집 봇]
- - total_db.py
- -  
-bg_youtube.js
-bgmain.js
-seoul.js
-
+ - total_db.py / global_db.py
+   국가별 확진자 사이트 (https://gisanddata.maps.arcgis.com/apps/Embed/index.html?webmap=14aa9e5660cf42b5b4b546dec6ceec7c&extent=77.3846,11.535,163.5174,52.8632)에서 확진자 정보, 모든 국가별 정보 파싱
+ - korea_db_area.py / seoul.py
+   국내 서울 확진자 및 동선 정보 파싱
+ - naver_news.py
+   코로나 관련 키워드로 일정 시간마다 네이버 및 유튜브 검색하여 나온 결과를 파싱
+   
 [메인페이지]
 
 ![image](https://user-images.githubusercontent.com/50505445/109693716-58027400-7bcd-11eb-85c9-67a7b9c9c548.png)
