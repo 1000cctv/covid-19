@@ -1,0 +1,231 @@
+
+
+<!-- ***********************************************네이버 뉴스 템플릿********************************************** -->
+
+<template name="news_kr">
+  <body>
+
+
+  </body>
+
+<script data-ad-client="ca-pub-3039897526526251" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+data-checked-head = "true"></script>
+  <!-- Page Content -->
+
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-3">
+        <div class="list-group">
+          <a href="/" class="list-group-item ">종합 현황 보기<!-- <span class="badge badge-primary">New</span> --></a>
+
+
+          <a href="/seoul" class="list-group-item ">지역 상세 현황<span class="badge badge-primary" style="font-size: x-small;">서울</span></a>
+
+          <a href="/new_s" class="list-group-item active">소식<span class="badge badge-primary" style="font-size: x-small;">뉴스 / 유튜브</span></a>
+
+
+<!--           <a class="list-group-item navbar-toggler" data-toggle="collapse"  data-target="#navbarResponsive2" aria-controls="navbarResponsive2" aria-expanded="false" aria-label="Toggle navigation" style="font-size: large;">
+            지역 상세 현황   
+            <span class="badge badge-primary" style="font-size: x-small;"></span></a>
+      <div class="collapse navbar-collapse" id="navbarResponsive2">
+        <ul class="nav-item ml-auto">
+           <li class="nav-item">
+            <a class="list-group-item" style="font-size: small;" href="/seoul" >서울
+              <span class="badge badge-primary" style="font-size: x-small;">new</span></a>
+          </li>
+        </ul>
+      </div>
+*****************************************************************
+
+          <a class="list-group-item active navbar-toggler" data-toggle="collapse"  data-target="#navbarResponsive3" aria-controls="navbarResponsive3" aria-expanded="false" aria-label="Toggle navigation" style="font-size: large;">
+            소식
+            <span class="badge badge-primary" style="font-size: x-small;">뉴스 / 유튜브</span>
+          </a>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive3">
+        <ul class="nav-item ml-auto">
+          <li class="nav-item active">
+            <a class="list-group-item" style="font-size: small;" href="/new_s" >뉴스 / 유튜브
+            <span class="badge badge-primary" style="font-size: x-small;">new</span>
+          </a>
+          </li>
+        </ul>
+      </div>
+ -->
+
+<!-- ***************************************************************** -->
+
+          <a class="list-group-item navbar-toggler" data-toggle="collapse"  data-target="#navbarResponsive4" aria-controls="navbarResponsive4" aria-expanded="false" aria-label="Toggle navigation" style="font-size: small;">
+            * 데이터 출처
+          </a>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive4">
+        <ul class="nav-item ml-auto">
+          <li class="nav-item active">
+            <a class="list-group-item" style="font-size: small;" href="http://www.cdc.go.kr/cdc/" target="_blank" >KCDC 질병관리본부</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="list-group-item"  style="font-size: small;" href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6" target="_blank">Coronavirus COVID-19 Global Cases by Johns Hopkins CSSE</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="list-group-item"  style="font-size: small;" href="http://ncov.mohw.go.kr/" target="_blank">
+            코로나바이러스감염증-19</a>
+          </li>
+          <li class="nav-item">
+            <a class="list-group-item"  style="font-size: small;" href="http://www.seoul.go.kr/coronaV/coronaStatus.do" target="_blank">
+            서울특별시</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+      </div>
+<div class="col-lg-9">
+<!-- ***************************************************************** -->
+
+
+<!-- ************************************************************************************************* -->
+
+        <div class="card card-outline-secondary my-4">
+                             <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">코로나 관련 실시간 기사</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/ytb">YouTube</a>
+                    </li>
+                  </ul>
+          <div class="card-header">
+            
+          </div>
+          {{#each news_status}} 
+          <div class="bbaa card-body">
+            <a target="_blank" style="text-decoration: none;" href="{{value.뉴스링크}}">
+                          <style type="text/css">
+                           a:link { color: black; text-decoration: none;}
+                           a:visited { color: black; text-decoration: none;}
+                           a:hover { color: blue; text-decoration: underline;}
+                          </style>
+            <!-- <img align="left" width="150px" height="100px" src="{{value.이미지링크}}" alt="#"> -->
+            <!-- {{news_status.[0].value.이미지링크}} -->
+            <h5>&nbsp;&nbsp; {{value.메인제목}}</h5>
+            <p>&nbsp;&nbsp;&nbsp;{{value.내용}}</p>
+            <small class="text-muted">&nbsp;&nbsp;{{value.출처시간}}</small> 
+            <hr>
+          </a>
+          </div>
+          {{/each}}
+          
+
+        </div>
+
+  
+<!-- ************************************************************************************************* -->
+
+      </div>
+    </div>
+  </div>
+  </template>
+
+
+
+
+
+
+
+<!-- ***********************************************유튜브********************************************** -->
+<template name="youtube_kr">
+
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+
+<!-- *************************************************************************************************** -->
+      <div class="col-lg-3">
+        <div class="list-group">
+          <a href="/" class="list-group-item ">종합 현황 보기<!-- <span class="badge badge-primary">New</span> --></a>
+
+
+          <a href="/seoul" class="list-group-item">지역 상세 현황<span class="badge badge-primary" style="font-size: x-small;">서울</span></a>
+
+          <a href="/new_s" class="list-group-item active">소식<span class="badge badge-primary" style="font-size: x-small;">뉴스 / 유튜브</span></a>
+
+
+<!-- ***************************************************************** -->
+
+          <a class="list-group-item navbar-toggler" data-toggle="collapse"  data-target="#navbarResponsive4" aria-controls="navbarResponsive4" aria-expanded="false" aria-label="Toggle navigation" style="font-size: small;">
+            * 데이터 출처
+          </a>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive4">
+        <ul class="nav-item ml-auto">
+          <li class="nav-item active">
+            <a class="list-group-item" style="font-size: small;" href="http://www.cdc.go.kr/cdc/" target="_blank" >KCDC 질병관리본부</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="list-group-item"  style="font-size: small;" href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6" target="_blank">Coronavirus COVID-19 Global Cases by Johns Hopkins CSSE</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="list-group-item"  style="font-size: small;" href="http://ncov.mohw.go.kr/" target="_blank">
+            코로나바이러스감염증-19</a>
+          </li>
+          <li class="nav-item">
+            <a class="list-group-item"  style="font-size: small;" href="http://www.seoul.go.kr/coronaV/coronaStatus.do" target="_blank">
+            서울특별시</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+      </div>
+
+<!-- ***************************************************************** -->
+
+<div class="col-lg-9">
+<!-- ************************************************************************************************* -->
+
+        <div class="card card-outline-secondary my-4">
+                   <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/new_s">코로나 관련 실시간 기사</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="/ytb">YouTube</a>
+                    </li>
+                  </ul>
+          <div class="card-header">
+            
+          </div>
+          {{#each youtube_status}} 
+          <div class="bbaa card-body">
+            <a target="_blank" style="text-decoration: none;" href="{{value.영상링크}}">
+                          <style type="text/css">
+                           a:link { color: black; text-decoration: none;}
+                           a:visited { color: black; text-decoration: none;}
+                           a:hover { color: blue; text-decoration: underline;}
+                          </style>
+            <img align="left" width="285px" height="160px" src="{{value.이미지링크}}" alt="#">
+            <h6>&nbsp;&nbsp;<B>{{value.영상제목}}</B></h6>
+            <p>&nbsp;&nbsp;&nbsp;{{value.영상내용}}</p>
+            <small class="text-muted">&nbsp;&nbsp;{{value.출처}}<br>&nbsp;&nbsp;{{value.조회수시간}}</small> 
+            <hr>
+          </a>
+          </div>
+          {{/each}}
+          
+
+        </div>
+
+  
+<!-- ************************************************************************************************* -->
+
+      </div>
+    </div>
+  </div>
+  </template>
+

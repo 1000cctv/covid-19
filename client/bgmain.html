@@ -1,0 +1,376 @@
+<head>
+
+</head>
+
+<body>
+
+</body>
+
+
+<!-- <template name="bgmain_new">
+<article>
+
+</article>
+</template>
+ -->
+
+
+<template name="반응형">
+<script data-ad-client="ca-pub-3039897526526251" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+data-checked-head = "true"></script>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-3">
+        <div class="list-group">
+          <a href="/" class="list-group-item active">종합 현황 보기<!-- <span class="badge badge-primary">New</span> --></a>
+
+
+          <a href="/seoul" class="list-group-item">지역 상세 현황<span class="badge badge-primary" style="font-size: x-small;">서울</span></a>
+
+          <a href="/new_s" class="list-group-item">소식<span class="badge badge-primary" style="font-size: x-small;">뉴스 / 유튜브</span></a>
+
+  <!--         <a href="/seoul" class="list-group-item navbar-toggler" data-toggle="collapse"  data-target="#navbarResponsive2" aria-controls="navbarResponsive2" aria-expanded="false" aria-label="Toggle navigation" style="font-size: large;">
+            지역 상세 현황   
+            <span class="badge badge-primary" style="font-size: x-small;">서울</span></a> -->
+
+
+<!--       <div class="collapse navbar-collapse" id="navbarResponsive2">
+        <ul class="nav-item ml-auto">
+                    <li class="nav-item active">
+            <a class="list-group-item" style="font-size: small;" href="/seoul" >서울
+              <span class="badge badge-primary" style="font-size: x-small;">new</span></a>
+          </li>
+        </ul> 
+
+      </div> -->
+<!-- ***************************************************************** -->
+
+<!--           <a class="list-group-item navbar-toggler" data-toggle="collapse"  data-target="#navbarResponsive3" aria-controls="navbarResponsive3" aria-expanded="false" aria-label="Toggle navigation" style="font-size: large;">
+            소식
+            <span class="badge badge-primary" style="font-size: x-small;">뉴스 / 유튜브</span>
+          </a>
+ -->
+<!--       <div class="collapse navbar-collapse" id="navbarResponsive3">
+        <ul class="nav-item ml-auto">
+          <li class="nav-item active">
+            <a class="list-group-item" style="font-size: small;" href="/new_s" >뉴스 / 유튜브
+            <span class="badge badge-primary" style="font-size: x-small;">new</span>
+          </a>
+          </li>
+        </ul>
+      </div> -->
+
+<!-- ***************************************************************** -->
+
+          <a class="list-group-item navbar-toggler" data-toggle="collapse"  data-target="#navbarResponsive4" aria-controls="navbarResponsive4" aria-expanded="false" aria-label="Toggle navigation" style="font-size: small;">
+            * 데이터 출처
+          </a>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive4">
+        <ul class="nav-item ml-auto">
+          <li class="nav-item active">
+            <a class="list-group-item" style="font-size: small;" href="http://www.cdc.go.kr/cdc/" target="_blank">KCDC 질병관리본부</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="list-group-item"  style="font-size: small;" href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6" target="_blank">Coronavirus COVID-19 Global Cases by Johns Hopkins CSSE</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="list-group-item"  style="font-size: small;" href="http://ncov.mohw.go.kr/" target="_blank">
+            코로나바이러스감염증-19</a>
+          </li>
+          <li class="nav-item">
+            <a class="list-group-item"  style="font-size: small;" href="http://www.seoul.go.kr/coronaV/coronaStatus.do" target="_blank">
+            서울특별시</a>
+          </li>
+        </ul>
+      </div>
+
+
+<!--           <a href="#" class="list-group-item">Category 3</a> -->
+        </div>
+      </div>
+      <!-- /.col-lg-3 -->
+           
+      <div class="col-lg-9">
+
+        <div class="card mt-4">
+               <!--      <img class="card-img-top img-fluid" src="http://placehold.it/900x100" alt=""> -->
+          {{get_update}}
+          <div class="card-body">
+                      <div class="card-header">
+                        <span class="bounce animated">
+                        <h4 class="card-title text-center animated flipInX delay-0s">전 세계 현황 
+                          <h5>( {{number_format get_total_earth}} 명)</h5>
+                        </h4>
+                        </span>
+                      </div>
+         
+                    <div class = "row">
+
+                     <div class="col-6 col-sm-4 col-md-3 text-center">
+                      <br>
+                      <p>확진자
+                      <p><span  class="animated flipInX delay-0s" style = "font-size: x-large;"> 
+                        <B>{{number_format get_total_earth}}</B></span>
+                      <p><span id="color" style = "font-size: small;"><B>{{number_format yesterday_get_total_earth}}</B></span></p> 
+                      </p>
+                      </p>
+                    </div>
+
+                     <div class="col-6 col-sm-4 col-md-3 text-center">
+                      <br>
+                      <p style = "color:red;">사망자
+                      <p><span class="animated flipInX delay-0s" style = "font-size: x-large; color:red;"><B>{{number_format get_total_deaths}}</B></span>
+                      <p><span id="color1" style = "font-size: small;"><B>{{number_format yesterday_get_total_deaths}}</B></span></p> 
+                      </p>
+                      </p>
+                    </div>
+
+                     <div class="col-6 col-sm-4 col-md-3 text-center">
+                      <br>
+                      <p style = "color:green;">완치자
+                      <p><span class="animated flipInX delay-0s" style = "font-size: x-large; color:green;"><B>{{number_format get_total_recov}}</B></span>
+                      <p><span id="color2" style = "font-size: small;"><B>{{number_format yesterday_get_total_recov}}</B></span></p> 
+                      </p>
+                      </p>
+                    </div>
+
+                     <div class="col-6 col-sm-4 col-md-3 text-center">
+                      <br>
+                      <p>치사율
+                      <p><span class="animated flipInX delay-0s" style = "font-size: x-large;"><B>{{get_total_per}}%</B></span>
+                      </p>
+                      </p>
+                    </div>
+                  </div>
+
+          </div>
+        </div>
+
+<!-- ************************************************************************************************* -->
+        <div class="card mt-4">
+          {{kr_get_update}}
+          <div class="card-body">
+                      <div class="card-header">
+                        <h4 class="card-title text-center animated flipInX delay-0s">국내 실시간 <h5> ( {{number_format get_total_korea}} 명) </h5></h4>
+                      </div>
+                    <div class = "row">
+                     <div class="col-4 col-sm-4 col-md-2 text-center">
+                      <br>
+                      <p>격리중
+                      <p><span class="animated flipInX delay-0s" style = "font-size: x-large;"> <B>{{number_format get_total_pppp}}</B></span>
+
+                      <p><span id="kr_color1" style = "font-size: small;"><B>{{number_format yesterday_get_total_pppp}}</B></span></p> 
+                      </p>
+                      </p>
+                    </div>
+
+                     <div class="col-4 col-sm-4 col-md-2 text-center">
+                      <br>
+                      <p style = "color:red;">사망자
+                      <p><span style = "font-size: x-large; color:red;"><B>{{number_format get_korea_deaths}}</B></span>
+                      <p><span id="kr_color2" class="animated flipInX delay-0s" style="font-size: small;">
+                        <B>{{number_format yesterday_get_korea_deaths}}</B></span></p> 
+                      </p>
+                      </p>
+                    </div>
+
+                     <div class="col-4 col-sm-4 col-md-2 text-center">
+                      <br>
+                      <p style = "color:green;">격리해제
+                      <p><span class="animated flipInX delay-0s" style = "font-size: x-large; color:green;"><B>{{number_format get_korea_recov}}</B></span>
+                      <p><span id="kr_color3" style = "font-size: small"><B>{{number_format yesterday_get_korea_recov}}</B></span></p> 
+                      </p>
+                      </p>
+                    </div>
+
+
+                     <div class="col-6 col-sm-4 col-md-2 text-center">
+                      <br>
+                      <p style = "color:red;">의심환자
+                      <p><span class="animated flipInX delay-0s" style = "font-size: x-large; color:red;"><B>{{number_format get_korea_rea}}</B></span>
+                      <p><span id="kr_color4" style = "font-size: small"><B>{{number_format yesterday_get_korea_rea}}</B></span></p> 
+                      </p>
+                      </p>
+                    </div>
+
+                     <div class="col-6 col-sm-4 col-md-2 text-center">
+                      <br>
+                      <p style = "color:red;">검사중
+                      <p><span class="animated flipInX delay-0s" style = "font-size: x-large; color:red;"><B>{{number_format get_korea_ing}}</B></span>
+                      <p><span id="kr_color5" style = "font-size: small;"><B>{{number_format yesterday_get_korea_ing}}</B></span></p> 
+                      </p>
+                      </p>
+                    </div>
+
+                     <div class="col-14 col-sm-4 col-md-2 text-center">
+                      <br>
+                      <p style = "color:green;">결과 음성
+                      <p><span class="animated flipInX delay-0s" style = "font-size: x-large; color:green;"><B>{{number_format get_korea_no}}</B></span>
+                      <p><span id="kr_color6" style = "font-size: small;"><B>{{number_format yesterday_get_korea_no}}</B></span></p> 
+                      </p>
+                      </p>
+                    </div>
+                  </div>
+          </div>
+        </div>
+
+<!-- ************************************************************************************************* -->
+        <div class="card mt-4">
+          <div class="card-body">
+                      <div class="card-header">
+                        <h4 class="card-title text-center">국내 지역별 <!-- {{number_format kr_cty_count}}명 --></h4>
+                      </div>
+                      <div class="card-body" style="text-align: center;">
+                         <div id ="google_korea_map" > </div>
+                      </div>
+
+
+   
+                <table class="table table-sm " style='margin-bottom: 0;'>
+                  <thead>
+                    <tr class="info">
+                      <th height="0px" width="100px" style="vertical-align:middle; text-align:center">지역</th>
+                      <th height="50px" width="250px" style="vertical-align:middle; text-align:center">확진자</th>
+                    </tr>
+                  </thead>
+                </table>
+
+
+                  <div id="contain">
+                    <table  style="overflow-x: auto;" class="table table-sm table-striped">
+                    <tbody>
+                     {{#each kr_contry}} 
+                      <tr>
+                        <td width="100px" style="vertical-align:middle; text-align:center"><B>
+                        {{name}} </B></td>
+                        <td width="250px" style="vertical-align:middle; text-align:center">{{number_format value}} 명
+                          {{#if seoul_url name}}
+                            <br>
+                            <a href="/seoul#">
+                            <span class="badge badge-primary" style="font-size: x-small;">
+                            {{seoul_url2.name}}
+                            </span>
+                            </a>
+                          {{/if}}
+                        </td>
+                      </tr> 
+                      {{/each}}
+                    </tbody>
+                  </table>
+                </div>
+
+          </div>
+        </div>
+<!-- ************************************************************************************************* -->
+
+        <div class="card mt-4">
+          <div class="card-body">
+                      <div class="card-header">
+                        <h4 class="card-title text-center">국내 주간 통계</h4>
+                      </div>
+                      <div class="card-body" style="text-align: center;">
+                           <div id="g_chart_div"></div>
+                       <!-- <div  id="kca" ></div> -->
+                      </div>
+          </div>
+        </div>
+<!-- ************************************************************************************************* -->
+<!-- 
+        <div class="card mt-4">
+          <div class="card-body">
+                      <div class="card-header">
+                        <h4 class="card-title text-center">국내 감염 현황</h4>
+                      </div>
+                      <div class="card-body" style="text-align: center;">
+                       <div  id="korea_age_chart" width="500px" style="display: inline-block;"></div>
+                      </div>
+
+          </div>
+        </div> -->
+<!-- ************************************************************************************************* -->
+        <div class="card mt-4">
+          <div class="card-body">
+                      <div class="card-header " >
+                        <h4 class="card-title text-center">전체 국가별 ({{get_total_count}} 건)</h4>
+                      </div>
+                      <div class="card-body" style="text-align: center;">
+                        <div id ="google_word_map" > </div>
+                      <!--  <div  id="world_map" style="display: inline-block;"></div> -->
+                      </div>
+
+                <table class="table table-sm " style='margin-bottom: 0;'>
+                  <thead>
+                    <tr>
+                      <th width="200px"   style="vertical-align:middle; text-align:center; font-size: small;"></th>
+                      <th width="950px"   style="vertical-align:middle; text-align:center; font-size: small;">나라</th>
+                      <th width="250px"  style="vertical-align:middle; text-align:center; font-size: small ">확진</th>
+                      <th width="250px"  style="vertical-align:middle; text-align:center; color:red; font-size: small">사망</th>
+                      <th width="350px"  style="vertical-align:middle; text-align:center; color:green; font-size: small">완치</th>
+                    </tr>
+                  </thead>
+                </table>
+
+<!-- table table-bordered table-condensed table-striped table-hover -->
+              <div id="contain">
+                 <table style="overflow-x: auto; margin-bottom: 0;" class="table table-sm table-striped " >
+                  
+                    <tbody>
+                     {{#each get_country_status global}} 
+                      <tr>
+                        <!-- <td  height="30px" width="10px" style="vertical-align:middle; text-align:center; font-size: x-small"><B>-</B></td> -->
+                        <td  height="30px"  style="vertical-align:middle; text-align:center; font-size: small;">{{count}}</td>
+                        <td  height="30px"  style="vertical-align:middle; text-align:center; font-size: small;">{{name}}</td>
+                        <td  height="30px"  style="vertical-align:middle; text-align:center; font-size: small">{{number_format value}}</td>
+                        <td  height="30px"  style="vertical-align:middle; text-align:center; color:red; font-size: small">{{number_format value2}}</td>
+                        <td  height="30px"  style="vertical-align:middle; text-align:center; color:green; font-size: small">{{number_format value3}}</td>
+                      </tr> 
+                      {{/each}}
+                    </tbody>
+                  </table>
+                </div>
+
+
+          </div>
+        </div>
+
+<!-- ************************************************************************************************* -->
+        <!-- /.card -->
+
+<!--         <div class="card card-outline-secondary my-4">
+          <div class="card-header">
+            Product Reviews
+          </div>
+          <div class="card-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+            <hr>
+            <a href="#" class="btn btn-success">Leave a Review</a>
+          </div>
+        </div> -->
+        <!-- /.card -->
+
+      </div>
+      <!-- /.col-lg-9 -->
+
+    </div>
+
+  </div>
+
+
+
+
+  </template>
+

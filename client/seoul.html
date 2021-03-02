@@ -1,0 +1,362 @@
+
+
+<!-- ***********************************************서울********************************************** -->
+<template name="서울">
+<script data-ad-client="ca-pub-3039897526526251" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+data-checked-head = "true"></script>
+<!-- <script language = "javascript">
+window.onload=function(){
+        item = document.getElementsByClassName("seoul_");
+        // console.log(item.length)
+        for(i=0;i<item.length;i++){
+            item[i].style.display = "none";
+        }
+
+}
+</script> -->
+
+
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-3">
+
+        <div class="list-group">
+
+          <a href="/" class="list-group-item ">종합 현황 보기<!-- <span class="badge badge-primary">New</span> --></a>
+
+
+          <a href="/seoul" class="list-group-item active">지역 상세 현황<span class="badge badge-primary" style="font-size: x-small;">서울</span></a>
+
+          <a href="/new_s" class="list-group-item">소식<span class="badge badge-primary" style="font-size: x-small;">뉴스 / 유튜브</span></a>
+
+
+<!--           <a class="list-group-item active navbar-toggler" data-toggle="collapse"  data-target="#navbarResponsive2" aria-controls="navbarResponsive2" aria-expanded="false" aria-label="Toggle navigation" style="font-size: large;">
+            지역 상세 현황 
+
+            <span class="badge badge-primary" style="font-size: x-small;">서울</span></a>
+      <div class="collapse navbar-collapse" id="navbarResponsive2">
+        <ul class="nav-item ml-auto">
+                    <li class="nav-item active">
+            <a class="list-group-item" style="font-size: small;" href="/seoul" >서울
+              <span class="badge badge-primary" style="font-size: x-small;">new</span></a>
+          </li>
+        </ul>
+      </div>
+*****************************************************************
+
+          <a class="list-group-item navbar-toggler" data-toggle="collapse"  data-target="#navbarResponsive3" aria-controls="navbarResponsive3" aria-expanded="false" aria-label="Toggle navigation" style="font-size: large;">
+            소식
+            <span class="badge badge-primary" style="font-size: x-small;">뉴스 / 유튜브</span>
+          </a>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive3">
+        <ul class="nav-item ml-auto">
+          <li class="nav-item active">
+            <a class="list-group-item" style="font-size: small;" href="/new_s" >뉴스 / 유튜브
+            <span class="badge badge-primary" style="font-size: x-small;">new</span>
+          </a>
+          </li>
+        </ul>
+      </div> -->
+
+<!-- ***************************************************************** -->
+
+          <a class="list-group-item navbar-toggler" data-toggle="collapse"  data-target="#navbarResponsive4" aria-controls="navbarResponsive4" aria-expanded="false" aria-label="Toggle navigation" style="font-size: small;">
+            * 데이터 출처
+          </a>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive4">
+        <ul class="nav-item ml-auto">
+          <li class="nav-item active">
+            <a class="list-group-item" style="font-size: small;" href="http://www.cdc.go.kr/cdc/" target="_blank">KCDC 질병관리본부</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="list-group-item"  style="font-size: small;" href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6" target="_blank">Coronavirus COVID-19 Global Cases by Johns Hopkins CSSE</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="list-group-item"  style="font-size: small;" href="http://ncov.mohw.go.kr/" target="_blank">
+            코로나바이러스감염증-19</a>
+          </li>
+          <li class="nav-item">
+            <a class="list-group-item"  style="font-size: small;" href="http://www.seoul.go.kr/coronaV/coronaStatus.do" target="_blank">
+            서울특별시</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+      </div>
+<div class="col-lg-9">
+<!-- ***************************************************************** -->
+
+
+
+<!-- ************************************************************************************************* -->
+        <div class="card mt-4">
+          <div class="card-body">
+                      <div class="card-header">
+                        <h4 class="card-title text-center">서울 현황 <h5> 
+                        ( {{number_format all_people}} 명 )
+                    		</h5>
+                        </h4>
+                      </div>
+
+                    <div class = "row">
+
+                     <div class="col-4 col-sm-4 col-md-4 text-center">
+                      <br>
+                      <p>확진자
+                      <p><span style = "font-size: x-large;"> <B>{{number_format inf}}</B></span>
+                      <p><span id="kr_color1" style = "font-size: small;"><B>{{number_format yes_inf}}</B></span></p> 
+                      </p>
+                      </p>
+                    </div>
+
+                     <div class="col-4 col-sm-4 col-md-4 text-center">
+                      <br>
+                      <p style="color:green;">퇴원
+                      <p><span style = "font-size: x-large; color:green;"> <B>{{number_format rec}}</B></span>
+                      <p><span id="kr_color1" style = "font-size: small;"><B>{{number_format yes_rec}}</B></span></p> 
+                      </p>
+                      </p>
+                    </div>
+
+                     <div class="col-4 col-sm-4 col-md-4 text-center">
+                      <br>
+                      <p style = "color:red;">사망자
+                      <p><span style = "font-size: x-large; color:red;"> <B>{{number_format dt}}</B></span>
+                      <p><span id="kr_color1" style = "font-size: small;"><B>{{number_format yes_dt}}</B></span></p> 
+                      </p>
+                      </p>
+                    </div>
+
+                     <div class="col-6 col-sm-6 col-md-4 text-center">
+                      <br>
+                      <p style = "color:red;">의심환자
+                      <p><span style = "font-size: x-large; color:red;"><B>{{number_format rea}}</B></span>
+                      <p><span id="kr_color4" style = "font-size: small;"><B>{{number_format yes_rea}}</B></span></p> 
+                      </p>
+                      </p>
+
+
+                    </div>
+
+                     <div class="col-6 col-sm-6 col-md-4 text-center">
+                     <br>
+                      <p style = "color:red;">검사중
+                      <p><span style = "font-size: x-large; color:red;"><B>{{number_format ing}}</B></span>
+                      <p><span id="kr_color5" style = "font-size: small;"><B>{{number_format yes_ing}}</B></span></p> 
+                      </p>
+                      </p>
+
+                    </div>
+
+
+                     <div class="col-12 col-sm-6 col-md-4 text-center">
+                     <br>
+                      <p style = "color:green;">결과 음성
+                      <p><span style = "font-size: x-large; color:green;"><B>{{number_format no}}</B></span>
+                      <p><span id="kr_color6" style = "font-size: small;"><B>{{number_format yes_no}}</B></span></p> 
+                      </p>
+                      </p>
+
+                    </div>
+
+                     <div class="col-6 col-sm-6 col-md-4 text-center">
+                      <br>
+                      <p style = "color:red;">자가격리자
+                      <p><span style = "font-size: x-large; color:red;"><B>{{number_format self_inf}}</B></span>
+                      <p><span id="kr_color7" style="font-size: small"><B>{{number_format yes_self_inf}}</B></span></p> 
+                      </p>
+                      </p>
+                    </div>
+
+                     <div class="col-6 col-sm-6 col-md-4 text-center">
+                      <br>
+                      <p style = "color:red;">감시중
+                      <p><span style = "font-size: x-large; color:red;"><B>{{number_format self_ing}}</B></span>
+                      <p><span id="kr_color8" style="font-size: small"><B>{{number_format yes_self_ing}}</B></span></p> 
+                      </p>
+                      </p>
+                    </div>
+
+                     <div class="col-12 col-sm-6 col-md-4 text-center">
+                      <br>
+                      <p style = "color:green;">감시해제
+                      <p><span style = "font-size: x-large; color:green;"><B>{{number_format self_no}}</B></span>
+                      <p><span id="kr_color9" style = "font-size: small;"><B>{{number_format yes_self_no}}</B></span></p> 
+                      </p>
+                      </p>
+                    </div>
+
+                  </div>
+          </div>
+        </div>
+
+
+<!-- ************************************************************************************************* -->
+<!-- <script type="text/javascript">
+      function filter(){
+        var value, name, item, i;
+
+        value = document.getElementById("search").value.toUpperCase();
+        item = document.getElementsByClassName("seoul_");
+        sr = document.getElementById("search_result");
+        ct = 0;
+        for(i=0;i<item.length;i++){
+          name = item[i]
+          
+
+          if(name.innerHTML.toUpperCase().indexOf(value) > -1){
+            item[i].style.display = "table-cell";
+            ct = ct+1
+          }else{
+            item[i].style.display = "none";
+          }
+          if (value.length == 0){
+            item[i].style.display = "none";
+            ct = 0
+          }
+
+        }
+        if (ct >= 1){
+          sr.style.color = "green";
+          sr.style.width = "150px";
+          sr.innerHTML = "<B> 검색 결과 :   "+ct+"개 찾음</B>";
+        }else if (ct == 0){
+          sr.style.color = "red";
+          sr.innerHTML = "<B>찾지 못함</B>";
+        }
+        ct =0;
+      }
+
+</script> -->
+
+<!-- ************************************************************************************************* -->
+
+
+        <div class="card mt-4">
+                   <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">확진자 동선 파악</a>
+                    </li>
+<!--                     <li class="nav-item">
+                      <a id="sseoul" class="nav-link" href="">선별진료소(패치중)</a>
+                    </li> -->
+                  </ul>
+                    <div class="card-body">
+
+                      <div class="card-header">
+                        <h4 class="card-title text-center">서울 확진자 동선</h4>
+                        <button id="btn" type="button" class="btn btn-outline-secondary">▼전체 열기</button>
+                        <button id="btn2" type="button" class="btn btn-outline-secondary">▲전체 닫기</button>
+                      </div>
+
+
+
+
+
+                    <div class = "row">
+                        <div class = "container-4">
+                        <i class="fa fa-search">
+                        <input onkeyup="" type="search" id="search"  aria-describedby="inputSuccess2Status"  
+                        placeholder="검색" style="width:150px; height:25px; background-color:#ece8e8; color: black;"></i>                        
+                        <label style="width:200px; font-size: small;" id="search_result">    
+                        </label><br>
+                      </div>
+                      <br>
+                    <table  style="overflow-x: auto;"  class="table table-sm">
+                    <tbody>
+                      <tr>
+                        <td   style="vertical-align:middle; text-align:center; font-size: small;"><B>-</B></td>
+                        <td    style="vertical-align:middle; text-align:center; font-size: small;">정보</td>
+                        <td   style="vertical-align:middle; text-align:center; font-size: small;">접촉</td>
+                        <td   style="vertical-align:middle; text-align:center; font-size: small;">일자</td>
+                        <td  width="70" style="vertical-align:middle; text-align:center; font-size: small;">거주</td>
+                        <td    style="vertical-align:middle; text-align:center; font-size: small;">격리<br>시설</td>
+                      </tr> 
+                      {{#each seoul_status}} 
+                      <tr>
+                        <td class="seoul_연번" style="background-color:#d7e0e6; vertical-align:middle; text-align:center; font-size: small;">
+                        {{number_format value.연번}}</td>
+                        <td class="seoul_인적사항" style="background-color:#d7e0e6; vertical-align:middle; text-align:center; font-size: small;">
+                        {{number_format value.인적사항}}</td>
+                        <td class="seoul_감염경로" style="background-color:#d7e0e6; vertical-align:middle; text-align:center; font-size: small;">
+                        {{number_format value.감염경로}}</td>
+                        <td class="seoul_확진일" style="background-color:#d7e0e6; vertical-align:middle; text-align:center; font-size: small;">
+                        {{number_format value.확진일}}</td>
+                        <td class="seoul_거주지" style="background-color:#9eaeba; vertical-align:middle; text-align:center; font-size: small;"><B>
+                        {{number_format value.거주지}}</B></td>
+                        <td class="seoul_격리시설" style="background-color:#d7e0e6; vertical-align:middle; text-align:center; font-size: small;">
+                        {{number_format value.격리시설}}</td>
+                      </tr> 
+
+<!--                       <td  colspan="6" style="vertical-align:left; text-align:left; font-size: small;">
+                        <B>확진자 동선▼ [전체 열기 클릭]</B><br></td> -->
+
+                      {{#each seoul_status_tt body}} 
+                      <tr  >
+                        <td  id="btn_word" class="seoul_" colspan="6" 
+                        style="background-color:#e3f2fd; vertical-align:left; text-align:left; font-size: small; font-weight: bold;">{{value}}</td>
+                      </tr>                
+                      {{/each}}
+
+                      {{/each}}
+
+
+
+                  
+                  
+                    </tbody>
+                  </table>
+               
+
+
+                  </div>
+          </div>
+        </div>
+
+<!-- ************************************************************************************************* -->
+
+<!--         <div class="card card-outline-secondary my-4">
+          <div class="card-header">
+            서울
+          </div>
+          <div class="card-body">
+            <a href="http://naver.com">
+            <p>1111111</p>
+          </a>
+            <hr>
+             <small class="text-muted">포트스 작성 3/1/17</small> 
+
+            <p>1111111</p>
+            <hr>
+             <small class="text-muted">포트스 작성 3/1/17</small>
+
+            <p>1111111</p>
+            <hr>
+             <small class="text-muted">포트스 작성 3/1/17</small> 
+
+          </div>
+
+        </div> -->
+
+  
+<!-- ************************************************************************************************* -->
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  </template>
+
+
+
