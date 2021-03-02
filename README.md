@@ -1,13 +1,10 @@
 # covid-19_WebSite
 
-client
-
-bg_news.js
-
+[파이썬 정보수집 봇]
+ - total_db.py
+ -  
 bg_youtube.js
-
 bgmain.js
-
 seoul.js
 
 [메인페이지]
