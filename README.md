@@ -3,14 +3,17 @@
 [파이썬 정보수집]
  - total_db.py / global_db.py
    국가별 확진자 사이트 (https://gisanddata.maps.arcgis.com/apps/Embed/index.html?webmap=14aa9e5660cf42b5b4b546dec6ceec7c&extent=77.3846,11.535,163.5174,52.8632) 확진자 정보, 모든 국가별 정보 파싱
+   
    ![image](https://user-images.githubusercontent.com/50505445/109698292-9c444300-7bd2-11eb-857b-ef8cfa3d3df3.png)
 
  - korea_db_area.py / seoul.py
    국내 서울 확진자 및 동선 정보 파싱
+   
    ![image](https://user-images.githubusercontent.com/50505445/109698657-f93ff900-7bd2-11eb-9ca1-e676021a31c5.png)
 
  - naver_news.py
    코로나 관련 키워드로 일정 시간마다 네이버 및 유튜브 검색하여 나온 결과를 파싱
+   
    ![image](https://user-images.githubusercontent.com/50505445/109698530-d877a380-7bd2-11eb-92de-54ee293b2d4f.png)
    
 [메인페이지]
