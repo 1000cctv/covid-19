@@ -1,5 +1,15 @@
 # covid-19_WebSite
 
+client
+
+bg_news.js
+
+bg_youtube.js
+
+bgmain.js
+
+seoul.js
+
 [메인페이지]
 
 ![image](https://user-images.githubusercontent.com/50505445/109693716-58027400-7bcd-11eb-85c9-67a7b9c9c548.png)
